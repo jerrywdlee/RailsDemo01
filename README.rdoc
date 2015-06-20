@@ -1,5 +1,10 @@
 == README
 
+RoRで書籍管理システムを作ってみた。
+タダの練習です
+
+用RoR做的书籍管理系统，做着玩儿的。
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
