@@ -17,7 +17,7 @@
   <%= @book.isbn %>
 </p>
 
-<p><button onclick="window.open('http://www.google.com/?rd=ssl#q=ISBN<%= @book.isbn %>')">Search On Net</button></p>
+<p><button onclick="window.open('http://www.google.com/?rd=ssl#q=ISBN:<%= @book.isbn %>')">Search On Net</button></p>
 
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
