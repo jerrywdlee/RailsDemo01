@@ -1,0 +1,5 @@
+<h1>This Is The 2nd Page</h1>
+<p>Now Is <%= Time.now%></P>
+<a href="say_hello">Back To Page 1</a>
+<p><%= link_to 'Hello' , welcome_say_hello_path%></P>
+<p><%= link_to 'Google' , 'http://www.google.com'%></P>
