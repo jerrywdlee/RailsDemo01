@@ -1,5 +1,11 @@
 == README
 
+個人で楽しみ程度で作った図書管理システムです。深く考えないでくれ
+做着玩儿的图书管理程序，然并卵
+Just a book management system for fun
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
