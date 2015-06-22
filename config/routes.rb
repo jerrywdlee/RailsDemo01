@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :books
   get "welcome/say_hello" => "hello#say"
   get "welcome/page2" => "hello#page2"
+  get "index2" => "books#index2"
   root :to => "books#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

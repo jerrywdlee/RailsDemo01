@@ -1,0 +1,7 @@
+<% provide(:title, 'Books List by Genre') %>
+<h1>Books List by Genre</h1>
+
+<% @books.select("string(genre)").group("string(genre)") %>
+<!--
+
+-->
