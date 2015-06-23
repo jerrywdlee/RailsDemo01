@@ -1,7 +1,15 @@
 <% provide(:title, 'Books List by Genre') %>
 <h1>Books List by Genre</h1>
-
-<% @books.select("string(genre)").group("string(genre)") %>
+<table>
+<% @genres.each do |genre| %>
+<tr>
+<th><a href="genre/<%= genre.genre %>"><%= genre.genre %></a></th>
+<!--
+<td>search</td>
+-->
+</tr>
+<% end %>
+</table>
 <!--
 
 -->

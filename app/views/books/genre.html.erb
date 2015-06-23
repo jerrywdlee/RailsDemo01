@@ -1,8 +1,5 @@
-<% provide(:title, 'Books List') %>
-<p id="notice"><%= notice %></p>
-
-<h1>RoR Book Management System</h1>
-
+<% provide(:title, 'Genre:'+@gen) %>
+<h1>Book List Of <%= @gen %> </h1>
 <table>
   <thead>
     <tr>
@@ -17,8 +14,7 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @books.each do |book| %>
+<% @books.each do |book| %>
       <tr>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
@@ -32,13 +28,5 @@
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+</tbody>
 </table>
-
-<br>
-<!--
-<%= link_to 'New Book', new_book_path %>
--->
-<%= link_to 'New Book', new_book_path %>|<%= link_to 'Search by Genre', 'index2' %>
-
-<p>&copy;Jerry Lee 2015</p>

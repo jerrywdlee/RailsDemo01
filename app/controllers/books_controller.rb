@@ -8,9 +8,19 @@ class BooksController < ApplicationController
   end
 
   def index2
+   @genres = Book.select("genre").distinct
     #index2 to list genre
-    @books = Book.all
+    #@books = Book.all
+    #render :text => params
   end
+  
+  # to search books by genre
+  def genre
+    #render :text => params
+    @books = Book.where("genre = ? ",params[:ggg])
+    @gen = params[:ggg]
+  end
+
 
   # GET /books/1
   # GET /books/1.json
