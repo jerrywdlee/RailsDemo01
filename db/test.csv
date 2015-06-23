@@ -1,0 +1,14 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "schema_migrations" ("version" varchar NOT NULL);
+INSERT INTO "schema_migrations" VALUES('20150621074902');
+CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "publisher" varchar, "isbn" varchar, "genre" varchar, "useable" boolean, "summary" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL);
+INSERT INTO "books" VALUES(1,'基本情報技術者標準教科書 2015年版 ','大滝みや子','オーム社','9784274216602','資格','t','','2015-06-23 02:16:55.394849','2015-06-23 02:18:22.332865');
+INSERT INTO "books" VALUES(2,'暗殺教室公式キャラクターブック名簿の時間','松井 優征','集英社','9784088803869','漫画','f','','2015-06-23 02:38:13.383696','2015-06-23 02:53:39.675534');
+INSERT INTO "books" VALUES(3,'シカマル秘伝　闇の黙に浮ぶ雲','岸本 斉史','集英社','9784087033472','漫画','f','','2015-06-23 02:40:17.528614','2015-06-23 02:40:17.528614');
+INSERT INTO "books" VALUES(4,'うかる!行政書士総合問題集 2015年度版','伊藤塾','日本経済新聞出版社','9784532408527','資格','f','','2015-06-23 02:43:19.202373','2015-06-23 02:43:19.202373');
+INSERT INTO "books" VALUES(5,'警察官[大卒]採用試験問題集 合格エキスパート','スタジオ・レゾン','日東書院本社','9784528010468','資格','f','','2015-06-23 02:45:24.277013','2015-06-23 02:45:24.277013');
+DELETE FROM sqlite_sequence;
+INSERT INTO "sqlite_sequence" VALUES('books',5);
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version");
+COMMIT;
