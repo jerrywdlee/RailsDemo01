@@ -13,5 +13,26 @@
 
 <p>Total: <%= @book_sum  %> Books, In <%= @genre_sum  %> Genres</p>
 
-<%= pie_chart  @chart_data, height:"300px"%>
-<%= column_chart  @chart_data ,height:"250px"%>
+<%= form_tag({controller: "books", action: "index2"}, {data: {remote: true}}) do %>
+  <%= submit_tag("Show Graph", name: nil) %>
+<% end %>
+
+<div id="graph">
+  
+</div>
+
+<!-- Test ruby graph
+<%=  pie_chart  @chart_data, height:"300px"%>
+<%=  column_chart  @chart_data ,height:"250px"%>
+-->
+<!-- Test Graphics
+<div id="chart-100" style="height: 300px;"></div>
+    <script>
+      new Chartkick.BarChart("chart-100", [["0",32],["1",46],["2",28],["3",21],["4",20],["5",13],["6",27]]);
+    </script>
+
+<div id="chart" ></div>
+<script>
+new Chartkick.PieChart("chart", [["Blueberry", 44],["Strawberry", 23]]);
+</script>
+-->

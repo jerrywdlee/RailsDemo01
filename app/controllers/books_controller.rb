@@ -17,18 +17,19 @@ class BooksController < ApplicationController
    @book_sum = Book.all.count
    @genre_sum = Book.distinct.count("genre")
 
-# data for drawing graph
-@chart_data = Book.group(:genre).count
+   # data for drawing graph
+   #@chart_data = Book.group(:genre).count
+   # move to private method
+
+
+   #if ajax is on
+   ajax_action(@chart_data) if request.xhr?
+
     #index2 to list genre
     #@books = Book.all
     #render :text => params
   end
   
-# draw graph by ajax
-  def ajax_action
-  end
- 
-
   # to search books by genre
   def genre
     #render :text => params
@@ -93,6 +94,20 @@ class BooksController < ApplicationController
   end
 
   private
+
+  # draw graph by ajax
+  def ajax_action(data)
+    #ajax actions
+    @chart_data = Book.group(:genre).count
+    if @chart_data.size > 0
+      #render json: data.to_json
+      #render js: "$('#graph').html('<p>aaa</p>')"
+      render "draw.js.erb"
+    else
+      render js: "alert('No Data to Show!')"
+    end
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_book
       @book = Book.find(params[:id])

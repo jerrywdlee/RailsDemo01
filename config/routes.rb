@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "welcome/say_hello" => "hello#say"
   get "welcome/page2" => "hello#page2"
   get "genres" => "books#index2"
+#add post method to run ajax
+  post "genres" => "books#index2"
   get "genre/:ggg" => "books#genre"
   get "index" => "books#index"
   root :to => "books#index"
