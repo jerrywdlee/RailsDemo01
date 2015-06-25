@@ -17,8 +17,9 @@ class BooksController < ApplicationController
   # to search books by genre
   def genre
     #render :text => params
-    @books = Book.where("genre = ? ",params[:ggg])
     @gen = params[:ggg]
+    @books = Book.where("genre = ? ",@gen)
+    #@gen = params[:ggg]
   end
 
 
