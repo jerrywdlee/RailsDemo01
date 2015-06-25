@@ -8,12 +8,27 @@ class BooksController < ApplicationController
   end
 
   def index2
-   @genres = Book.select("genre").distinct
+   #@genres = Book.select("genre").distinct
+   #@genres = Book.select("genre")
+   
+   @genres = Book.group(:genre).count
+#to count as => {"資格"=>2, "漫画"=>2, "随筆"=>1, "社会"=>1}
+   #this is like [["資格", 2]["漫画",2]["随筆",1]["社会",1]]
+   @book_sum = Book.all.count
+   @genre_sum = Book.distinct.count("genre")
+
+# data for drawing graph
+@chart_data = Book.group(:genre).count
     #index2 to list genre
     #@books = Book.all
     #render :text => params
   end
   
+# draw graph by ajax
+  def ajax_action
+  end
+ 
+
   # to search books by genre
   def genre
     #render :text => params

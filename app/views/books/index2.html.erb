@@ -3,13 +3,15 @@
 <table>
 <% @genres.each do |genre| %>
 <tr>
-<th><a href="genre/<%= genre.genre %>"><%= genre.genre %></a></th>
-<!--
-<td>search</td>
--->
+<th><a href="genre/<%= genre[0] %>"><%= genre[0] %></a></th>
+
+<td>Has <%= genre[1] %> Book(s)</td>
+
 </tr>
 <% end %>
 </table>
-<!--
 
--->
+<p>Total: <%= @book_sum  %> Books, In <%= @genre_sum  %> Genres</p>
+
+<%= pie_chart  @chart_data, height:"300px"%>
+<%= column_chart  @chart_data ,height:"250px"%>
