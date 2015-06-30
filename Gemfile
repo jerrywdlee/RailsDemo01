@@ -21,6 +21,9 @@ gem 'jquery-rails'
 # Use Chartkick to draw graphs
 gem 'chartkick'
 
+# Use kaminari to paging
+gem 'kaminari'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

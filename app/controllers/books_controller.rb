@@ -5,6 +5,12 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
+    p "----------------"
+    p params[:page]
+    p "----------------"
+    # must be the same object selected
+    @books = Book.page(params[:page])
+    p @books
   end
 
   def index2

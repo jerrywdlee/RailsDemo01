@@ -3,6 +3,10 @@
 
 <h1>RoR Book Management System</h1>
 
+<!-- 追加箇所開始 -->
+<%= page_entries_info @books %>
+<!-- 追加箇所終了 -->
+
 <table>
   <thead>
     <tr>
@@ -35,10 +39,16 @@
   </tbody>
 </table>
 
+<!-- add for kaminari -->
+<%= paginate @books %>
+<!-- kaminari -->
+
+
 <br>
 <!--
 <%= link_to 'New Book', new_book_path %>
 -->
 <%= link_to 'New Book', new_book_path %>|<%= link_to 'Search by Genre', 'genres' %>
+
 
 <p>&copy;Jerry Lee 2015</p>
