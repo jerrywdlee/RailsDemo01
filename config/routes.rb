@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :books
+  # resources :books
   resources :books
   get "welcome/say_hello" => "hello#say"
   get "welcome/page2" => "hello#page2"
@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   post "genres" => "books#index2"
   get "genre/:ggg" => "books#genre"
   get "index" => "books#index"
+
+  # post "books" => "books#index"
+  # get "books" => "books#index"
+
+
   root :to => "books#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

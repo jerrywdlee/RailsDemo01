@@ -11,6 +11,11 @@ class BooksController < ApplicationController
     # must be the same object selected
     @books = Book.page(params[:page])
     p @books
+
+    respond_to do |format|
+      format.html
+      format.json { render json: BookDatatable.new(view_context) }
+    end
   end
 
   def index2

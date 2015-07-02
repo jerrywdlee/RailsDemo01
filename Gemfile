@@ -24,6 +24,10 @@ gem 'chartkick'
 # Use kaminari to paging
 gem 'kaminari'
 
+# Use ajax-datatables-rails
+gem 'jquery-datatables-rails'
+gem 'ajax-datatables-rails'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
