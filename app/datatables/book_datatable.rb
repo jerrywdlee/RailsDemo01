@@ -2,7 +2,7 @@ class BookDatatable < AjaxDatatablesRails::Base
 
   def sortable_columns
     # Declare strings in this format: ModelName.column_name
-    @sortable_columns ||= %w(Book.title Book.isbn Book.genre)
+    @sortable_columns ||= %w(Book.title Book.isbn Book.genre Book.id)
     # this is equal to:
     # @sortable_columns ||= ['Book.title','Book.isbn','Book.genre']
   end
