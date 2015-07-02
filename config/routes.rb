@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   post "genres" => "books#index2"
   get "genre/:ggg" => "books#genre"
   get "index" => "books#index"
-
+  
+  # testform
+  get "test" => "books#testform"
   # post "books" => "books#index"
   # get "books" => "books#index"
 

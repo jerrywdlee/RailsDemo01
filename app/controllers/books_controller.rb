@@ -18,6 +18,11 @@ class BooksController < ApplicationController
     end
   end
 
+  def testform
+  # testform controller
+    @book = Book.new
+  end
+
   def index2
    #@genres = Book.select("genre").distinct
    #@genres = Book.select("genre")

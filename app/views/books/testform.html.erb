@@ -1,0 +1,7 @@
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title %>
+  <%= f.input :isbn, :placeholder => 'ISBN-13'%>
+  <%= f.input :genre %>
+  <%= f.check_box :useable %>
+  <%= f.button :submit %>
+<% end %>
